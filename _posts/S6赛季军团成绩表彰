@@ -1,0 +1,383 @@
+---
+title：S6赛季军团成绩
+date：2025-04-10
+---
+<!DOCTYPE html>
+<html lang="zh-CN" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>风丶天蓝听雪 S6赛季军团表彰</title>
+    <!-- TailwindCSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        // 自定义TailwindCSS配置
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            200: '#bae6fd',
+                            300: '#7dd3fc',
+                            400: '#38bdf8',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            700: '#0369a1',
+                            800: '#075985',
+                            900: '#0c4a6e',
+                        }
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 0.5s ease-in-out',
+                        'slide-up': 'slideUp 0.5s ease-out',
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' },
+                        },
+                        slideUp: {
+                            '0%': { transform: 'translateY(20px)', opacity: '0' },
+                            '100%': { transform: 'translateY(0)', opacity: '1' },
+                        },
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap');
+        
+        body {
+            font-family: 'Noto Sans SC', sans-serif;
+            scroll-behavior: smooth;
+        }
+        
+        .card {
+            transition: all 0.3s ease;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .section {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.5s ease;
+        }
+        
+        .section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .btn {
+            transition: all 0.2s ease;
+        }
+        
+        .btn:hover {
+            transform: scale(1.05);
+        }
+        
+        .medal-gold {
+            background: linear-gradient(135deg, #FFD700 0%, #FFC107 100%);
+        }
+        
+        .medal-silver {
+            background: linear-gradient(135deg, #C0C0C0 0%, #A9A9A9 100%);
+        }
+        
+        .medal-bronze {
+            background: linear-gradient(135deg, #CD7F32 0%, #A0522D 100%);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 dark:bg-gray-900 text-gray-800 dark:text-gray-200 transition-colors duration-300">
+    <!-- 主题切换按钮 -->
+    <div class="fixed top-4 right-4 z-50">
+        <button id="theme-toggle" class="p-2 rounded-full bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 hover:bg-gray-300 dark:hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-primary-500 transition-all duration-300">
+            <i class="fas fa-sun dark:hidden"></i>
+            <i class="fas fa-moon hidden dark:inline"></i>
+        </button>
+    </div>
+
+    <div class="container mx-auto px-4 py-8 max-w-4xl">
+        <!-- 头部 -->
+        <header class="text-center mb-12 section">
+            <div class="inline-block p-2 px-4 bg-primary-100 dark:bg-primary-900 text-primary-800 dark:text-primary-100 rounded-full mb-4 animate-fade-in">
+                <span class="text-sm font-medium">S6赛季军团表彰</span>
+            </div>
+            <h1 class="text-4xl md:text-5xl font-bold mb-4 text-primary-700 dark:text-primary-300 animate-slide-up">风丶天蓝听雪</h1>
+            <div class="max-w-lg mx-auto mb-6 animate-fade-in">
+                <img src="https://s3.bmp.ovh/imgs/2025/04/10/28e13089b542f98b.jpeg" alt="风丶天蓝听雪" class="w-full h-auto rounded-xl shadow-lg">
+            </div>
+            <p class="text-gray-600 dark:text-gray-400 animate-fade-in">S6赛季军团荣誉榜</p>
+        </header>
+
+        <!-- 军团评比结果 -->
+        <section class="mb-12 section">
+            <div class="rounded-xl shadow-lg overflow-hidden bg-white dark:bg-gray-800">
+                <div class="p-6">
+                    <h2 class="text-2xl font-bold mb-6 text-center bg-gradient-to-r from-red-500 to-pink-500 bg-clip-text text-transparent">赛季总分前三</h2>
+                    
+                    <!-- 前三名军团 -->
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+                        <div class="flex flex-col items-center p-4 rounded-lg bg-gradient-to-br from-yellow-100 to-yellow-200 dark:from-yellow-900 dark:to-yellow-800 text-yellow-800 dark:text-yellow-200">
+                            <div class="w-16 h-16 medal-gold rounded-full flex items-center justify-center mx-auto mb-3 text-white">
+                                <i class="fas fa-crown text-2xl"></i>
+                            </div>
+                            <h4 class="text-lg font-bold text-yellow-700 dark:text-yellow-300">黄金军团</h4>
+                            <p class="text-yellow-600 dark:text-yellow-400 font-medium">乾坤</p>
+                        </div>
+                        
+                        <div class="flex flex-col items-center p-4 rounded-lg bg-gradient-to-br from-blue-100 to-blue-200 dark:from-blue-900 dark:to-blue-800 text-blue-800 dark:text-blue-200">
+                            <div class="w-16 h-16 medal-silver rounded-full flex items-center justify-center mx-auto mb-3 text-white">
+                                <i class="fas fa-medal text-2xl"></i>
+                            </div>
+                            <h4 class="text-lg font-bold text-blue-700 dark:text-blue-300">白银军团</h4>
+                            <p class="text-blue-600 dark:text-blue-400 font-medium">蓝城悍匪</p>
+                        </div>
+                        
+                        <div class="flex flex-col items-center p-4 rounded-lg bg-gradient-to-br from-green-100 to-green-200 dark:from-green-900 dark:to-green-800 text-green-800 dark:text-green-200">
+                            <div class="w-16 h-16 medal-bronze rounded-full flex items-center justify-center mx-auto mb-3 text-white">
+                                <i class="fas fa-award text-2xl"></i>
+                            </div>
+                            <h4 class="text-lg font-bold text-green-700 dark:text-green-300">青铜军团</h4>
+                            <p class="text-green-600 dark:text-green-400 font-medium">夕阳红大酱</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 军团特别表彰 -->
+        <section class="mb-12 section">
+            <div class="rounded-xl shadow-lg overflow-hidden bg-white dark:bg-gray-800">
+                <div class="p-6">
+                    <h2 class="text-2xl font-bold mb-6 text-center bg-gradient-to-r from-blue-500 to-indigo-500 bg-clip-text text-transparent">军团特别表彰</h2>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <!-- 左侧表彰 -->
+                        <div>
+                            <div class="card p-4 bg-white dark:bg-gray-800 rounded-lg shadow-md mb-4">
+                                <div class="flex items-center">
+                                    <div class="w-12 h-12 rounded-full bg-red-100 dark:bg-red-900 flex items-center justify-center mr-4">
+                                        <i class="fas fa-trophy text-red-500 dark:text-red-400 text-xl"></i>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-lg font-semibold">人均武勋第一</h3>
+                                        <p class="text-primary-600 dark:text-primary-400 font-bold">蓝城悍匪</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="card p-4 bg-white dark:bg-gray-800 rounded-lg shadow-md mb-4">
+                                <div class="flex items-center">
+                                    <div class="w-12 h-12 rounded-full bg-blue-100 dark:bg-blue-900 flex items-center justify-center mr-4">
+                                        <i class="fas fa-users text-blue-500 dark:text-blue-400 text-xl"></i>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-lg font-semibold">攻城出勤第一</h3>
+                                        <p class="text-primary-600 dark:text-primary-400 font-bold">乾坤</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- 右侧表彰 -->
+                        <div>
+                            <div class="card p-4 bg-white dark:bg-gray-800 rounded-lg shadow-md mb-4">
+                                <div class="flex items-center">
+                                    <div class="w-12 h-12 rounded-full bg-green-100 dark:bg-green-900 flex items-center justify-center mr-4">
+                                        <i class="fas fa-check-circle text-green-500 dark:text-green-400 text-xl"></i>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-lg font-semibold">武勋达标率第一</h3>
+                                        <p class="text-primary-600 dark:text-primary-400 font-bold">蓝城悍匪</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="card p-4 bg-white dark:bg-gray-800 rounded-lg shadow-md mb-4">
+                                <div class="flex items-center">
+                                    <div class="w-12 h-12 rounded-full bg-yellow-100 dark:bg-yellow-900 flex items-center justify-center mr-4">
+                                        <i class="fas fa-gavel text-yellow-500 dark:text-yellow-400 text-xl"></i>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-lg font-semibold">纪律最佳</h3>
+                                        <p class="text-primary-600 dark:text-primary-400 font-bold">夕阳红大酱</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 任务完成最多 -->
+                    <div class="card p-4 bg-white dark:bg-gray-800 rounded-lg shadow-md mt-4">
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 rounded-full bg-purple-100 dark:bg-purple-900 flex items-center justify-center mr-4">
+                                <i class="fas fa-tasks text-purple-500 dark:text-purple-400 text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-semibold">任务完成最多</h3>
+                                <p class="text-primary-600 dark:text-primary-400 font-bold">乾坤</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 军团成就展示 -->
+        <section class="mb-12 section">
+            <div class="rounded-xl shadow-lg overflow-hidden bg-white dark:bg-gray-800">
+                <div class="p-6">
+                    <h2 class="text-2xl font-bold mb-6 text-center bg-gradient-to-r from-purple-500 to-indigo-500 bg-clip-text text-transparent">军团成就展示</h2>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <!-- 乾坤军团 -->
+                        <div class="card bg-gradient-to-br from-yellow-50 to-yellow-100 dark:from-gray-800 dark:to-yellow-900/30 rounded-lg p-5">
+                            <div class="text-center mb-4">
+                                <div class="w-16 h-16 rounded-full bg-yellow-500/20 flex items-center justify-center mx-auto mb-2">
+                                    <i class="fas fa-crown text-yellow-600 dark:text-yellow-400 text-2xl"></i>
+                                </div>
+                                <h3 class="text-xl font-bold text-yellow-800 dark:text-yellow-300">乾坤</h3>
+                            </div>
+                            <ul class="space-y-2">
+                                <li class="flex items-center">
+                                    <i class="fas fa-star text-yellow-500 mr-2"></i>
+                                    <span>赛季总分第一</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-users text-yellow-500 mr-2"></i>
+                                    <span>攻城出勤第一</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-tasks text-yellow-500 mr-2"></i>
+                                    <span>任务完成最多</span>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <!-- 蓝城悍匪军团 -->
+                        <div class="card bg-gradient-to-br from-blue-50 to-blue-100 dark:from-gray-800 dark:to-blue-900/30 rounded-lg p-5">
+                            <div class="text-center mb-4">
+                                <div class="w-16 h-16 rounded-full bg-blue-500/20 flex items-center justify-center mx-auto mb-2">
+                                    <i class="fas fa-medal text-blue-600 dark:text-blue-400 text-2xl"></i>
+                                </div>
+                                <h3 class="text-xl font-bold text-blue-800 dark:text-blue-300">蓝城悍匪</h3>
+                            </div>
+                            <ul class="space-y-2">
+                                <li class="flex items-center">
+                                    <i class="fas fa-star text-blue-500 mr-2"></i>
+                                    <span>赛季总分第二</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-trophy text-blue-500 mr-2"></i>
+                                    <span>人均武勋第一</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-check-circle text-blue-500 mr-2"></i>
+                                    <span>武勋达标率第一</span>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <!-- 夕阳红大酱军团 -->
+                        <div class="card bg-gradient-to-br from-green-50 to-green-100 dark:from-gray-800 dark:to-green-900/30 rounded-lg p-5">
+                            <div class="text-center mb-4">
+                                <div class="w-16 h-16 rounded-full bg-green-500/20 flex items-center justify-center mx-auto mb-2">
+                                    <i class="fas fa-award text-green-600 dark:text-green-400 text-2xl"></i>
+                                </div>
+                                <h3 class="text-xl font-bold text-green-800 dark:text-green-300">夕阳红大酱</h3>
+                            </div>
+                            <ul class="space-y-2">
+                                <li class="flex items-center">
+                                    <i class="fas fa-star text-green-500 mr-2"></i>
+                                    <span>赛季总分第三</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-gavel text-green-500 mr-2"></i>
+                                    <span>纪律最佳</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 结语 -->
+        <section class="mb-12 text-center section">
+            <div class="bg-gradient-to-r from-primary-100 to-blue-100 dark:from-primary-900 dark:to-blue-900 rounded-xl p-8 shadow-md">
+                <p class="text-lg mb-4">感谢各军团的辛勤付出，共同创造S6赛季的辉煌战绩！</p>
+                <p class="text-primary-600 dark:text-primary-400 font-bold">风丶天蓝听雪 荣誉永存</p>
+            </div>
+        </section>
+
+        <!-- 页脚 -->
+        <footer class="text-center text-gray-600 dark:text-gray-400 section">
+            <div class="mb-4">
+                <h3 class="text-lg font-semibold mb-2">作者信息</h3>
+                <p>听雪丨莫莫</p>
+                <div class="flex justify-center space-x-4 mt-2">
+                    <a href="javascript:void(0);" onclick="alert('微信号: great_momo')" class="text-gray-600 hover:text-primary-500 dark:text-gray-400 dark:hover:text-primary-400 transition-colors">
+                        <i class="fab fa-weixin text-xl"></i>
+                    </a>
+                </div>
+            </div>
+            <p class="text-sm">© 2025 三谋 风丶天蓝听雪 保留所有权利.</p>
+        </footer>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        // 深色模式切换
+        const themeToggleBtn = document.getElementById('theme-toggle');
+
+        // 检查系统偏好
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            document.documentElement.classList.add('dark');
+        }
+
+        // 切换主题
+        themeToggleBtn.addEventListener('click', function() {
+            document.documentElement.classList.toggle('dark');
+        });
+
+        // 滚动动画
+        const sections = document.querySelectorAll('.section');
+
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver(function(entries, observer) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+
+        // 初始化显示第一个section
+        window.addEventListener('load', function() {
+            document.querySelector('header').classList.add('visible');
+        });
+    </script>
+</body>
+</html>
